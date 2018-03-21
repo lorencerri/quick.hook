@@ -1,27 +1,26 @@
 {
-  "//1": "describes your app and its dependencies",
-  "//2": "https://docs.npmjs.com/files/package.json",
-  "//3": "updating this file will download and update your packages",
-
-  "name": "my-glitch-app",
-  "version": "0.0.1",
-  "description": "What am I about?",
+  "name": "quick.hook",
+  "version": "1.0.5",
+  "description": "Easily create Discord Webhooks & create fallbacks using Discord.js",
+  "main": "index.js",
   "scripts": {
-    "start": "node server.js"
-  },
-  "dependencies": {
-    "express": "^4.16.3"
-  },
-  "engines": {
-    "node": "9.x"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
-    "url": "https://glitch.com/edit/#!/my-glitch-app"
+    "type": "git",
+    "url": "git+https://github.com/TrueXPixels/quick.hook.git"
   },
-  "license": "MIT",
   "keywords": [
-    "node",
-    "glitch",
-    "express"
-  ]
+    "quick",
+    "discord.js",
+    "webhooks"
+  ],
+  "author": "truexpixels",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TrueXPixels/quick.hook/issues"
+  },
+  "homepage": "https://github.com/TrueXPixels/quick.hook#readme",
+  "dependencies": {},
+  "devDependencies": {}
 }

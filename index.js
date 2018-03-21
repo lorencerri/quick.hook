@@ -45,7 +45,7 @@ module.exports = async function(channel, message, options) {
         delete: options.delete || false,
         color: options.color || null,
         name: options.name || 'Message',
-        icon: options.icon || null
+        icon: options.icon || undefined
     }
     if (isNaN(options.delete)) options.delete = false;
 

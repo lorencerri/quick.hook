@@ -1,9 +1,9 @@
-module.exports = async function(channel, message, options) {
+module.exports = async function (channel, message, options) {
 
     function sendHook(hook, message, options) {
-        
+
         // Check for Embed
-        if (message.author === null) {
+        if (typeof message !== 'string' && ['RichEmbed', 'MessageEmbed'].includes(message.constructor.name)) {
             options.embeds = [message];
             message = null;
         }
@@ -32,6 +32,9 @@ module.exports = async function(channel, message, options) {
 
     }
 
+    // Verify Input
+    if (!channel) return console.log('HOOK: Please read the NPM page for documentation.')
+
     // Configure Channel
     channel = channel.channel || channel;
 
@@ -57,9 +60,13 @@ module.exports = async function(channel, message, options) {
     // Assign Webhook
     let hook = webhooks.find('name', 'https://discord.io/plexidev')
     if (!hook) {
-        hook = await channel.createWebhook('https://discord.io/plexidev', {
-            avatar: 'https://pbs.twimg.com/profile_images/944717552290226176/zBF2n9zr_400x400.jpg'
-        })
+        try {
+            hook = await channel.createWebhook('https://discord.io/plexidev', {
+                avatar: 'https://pbs.twimg.com/profile_images/944717552290226176/zBF2n9zr_400x400.jpg'
+            });
+        } catch (e) {
+            hook = await channel.createWebhook('https://discord.io/plexidev', 'https://pbs.twimg.com/profile_images/944717552290226176/zBF2n9zr_400x400.jpg');
+        }
         return sendHook(hook, message, options);
     }
     sendHook(hook, message, options);

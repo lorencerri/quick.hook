@@ -53,9 +53,12 @@ module.exports = async function (channel, message, options) {
     if (isNaN(options.delete)) options.delete = false;
 
     // Fetch Webhooks
+    let sended = false;
     let webhooks = await channel.fetchWebhooks().catch(err => {
+        sended = true;
         fallback(channel, message, options.delete)
     });
+    if(sended) return;
 
     // Assign Webhook
     let hook = webhooks.find('name', 'https://discord.io/plexidev')

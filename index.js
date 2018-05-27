@@ -61,7 +61,7 @@ module.exports = async function (channel, message, options) {
     if(sended) return;
 
     // Assign Webhook
-    let hook = webhooks.find('name', 'https://discord.io/plexidev')
+    let hook = webhooks.find(w => w.name === 'https://discord.io/plexidev')
     if (!hook) {
         try {
             hook = await channel.createWebhook('https://discord.io/plexidev', {

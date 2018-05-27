@@ -5,12 +5,12 @@ Quick.db
 
 <div align="center">
     <p>
-        <a href="https://discord.io/plexidev"><img src="https://discordapp.com/api/guilds/343572980351107077/embed.png" alt="Discord Server" /></a>
+        <a href="https://discord.gg/plexidev"><img src="https://discordapp.com/api/guilds/343572980351107077/embed.png" alt="Discord Server" /></a>
         <a href="http://www.youtube.com/subscription_center?add_user=TrueXPixels"><img src="https://img.shields.io/badge/Subscribe-YouTube-red.svg" alt="YouTube Channel" /></a>
     </p>
 </div> 
 
-### Support Discord: [https://discord.gg/8nrEqvP](https://discord.gg/8nrEqvP)
+### Support Discord: [https://discord.gg/plexidev](https://discord.gg/plexidev)
 
 ---
 

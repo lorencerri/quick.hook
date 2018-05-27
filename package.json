@@ -1,6 +1,6 @@
 {
   "name": "quick.hook",
-  "version": "1.0.7",
+  "version": "1.4.1",
   "description": "Easily create Discord Webhooks & create fallbacks using Discord.js",
   "main": "index.js",
   "scripts": {
@@ -16,7 +16,7 @@
     "webhooks"
   ],
   "author": "truexpixels",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/TrueXPixels/quick.hook/issues"
   },

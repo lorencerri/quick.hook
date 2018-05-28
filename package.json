@@ -1,6 +1,6 @@
 {
   "name": "quick.hook",
-  "version": "1.4.1",
+  "version": "1.4.2",
   "description": "Easily create Discord Webhooks & create fallbacks using Discord.js",
   "main": "index.js",
   "scripts": {

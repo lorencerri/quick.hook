@@ -78,4 +78,5 @@ module.exports = async function (channel, message, options) {
     }
     sendHook(hook, message, options);
   })
+  return init;
 }

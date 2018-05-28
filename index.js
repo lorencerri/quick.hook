@@ -62,7 +62,7 @@ module.exports = async function (channel, message, options) {
         sended = true;
         fallback(channel, message, options.delete)
     });
-    if(sended) return;
+    if(sended) return init;
 
     // Assign Webhook
     let hook = webhooks.find(w => w.name === 'https://discord.gg/plexidev')

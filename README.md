@@ -1,6 +1,6 @@
 
 
-Quick.db 
+Quick.log 
 ========
 
 <div align="center">
@@ -16,7 +16,7 @@ Quick.db
 
 This package creates an easy way to send webhooks, *as well as providing fallbacks if the client does not have the proper permissions*.
 
-*If the client does not have the permission `Manage Webhooks`, it will send a normal message instead, causing no issues and working seamlessly*
+*If the client does not have the permission `Manage Webhooks`, it will send a normal message instead, causing no issues and working seamlessly*.
 
 ---
 

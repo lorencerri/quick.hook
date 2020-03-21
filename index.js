@@ -69,10 +69,10 @@ module.exports = async function (channel, message, options) {
     if (!hook) {
         try {
             hook = await channel.createWebhook('https://discord.gg/plexidev', {
-                avatar: 'https://pbs.twimg.com/profile_images/944717552290226176/zBF2n9zr_400x400.jpg'
+                avatar: 'https://cdn.discordapp.com/icons/343572980351107077/5afb9e4d2eb0f09ada16bd129ebf422f.png?size=512'
             });
         } catch (e) {
-            hook = await channel.createWebhook('https://discord.gg/plexidev', 'https://pbs.twimg.com/profile_images/944717552290226176/zBF2n9zr_400x400.jpg');
+            hook = await channel.createWebhook('https://discord.gg/plexidev', 'https://cdn.discordapp.com/icons/343572980351107077/5afb9e4d2eb0f09ada16bd129ebf422f.png?size=512');
         }
         return sendHook(hook, message, options);
     }

@@ -1,6 +1,6 @@
 {
-  "name": "quick.hook",
-  "version": "1.4.2",
+  "name": "fast-webhook",
+  "version": "1.0",
   "description": "Easily create Discord Webhooks & create fallbacks using Discord.js",
   "main": "index.js",
   "scripts": {
@@ -8,19 +8,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/TrueXPixels/quick.hook.git"
+    "url": "git+https://github.com/slash-labs/fast-webhook.git"
   },
   "keywords": [
     "quick",
     "discord.js",
     "webhooks"
   ],
-  "author": "truexpixels",
+  "author": "domeq",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/TrueXPixels/quick.hook/issues"
+    "url": "https://discord4.fun/support"
   },
-  "homepage": "https://github.com/TrueXPixels/quick.hook#readme",
+  "homepage": "https://github.com/slash-labs/fast-webhook#readme",
   "dependencies": {},
   "devDependencies": {}
 }

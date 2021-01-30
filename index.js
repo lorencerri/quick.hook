@@ -47,7 +47,7 @@ module.exports = async function (channel, message, options) {
     options = {
         delete: options.delete || false,
         color: options.color || null,
-        name: options.name || 'Message',
+        name: options.name || 'Slash',
         icon: options.icon || undefined
     }
     if (isNaN(options.delete)) options.delete = false;
@@ -65,7 +65,7 @@ module.exports = async function (channel, message, options) {
     if (!hook) {
         try {
             hook = await channel.createWebhook('Slash', {
-                avatar: 'https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/microsoft/209/thinking-face_1f914.png'
+                avatar: 'https://boome.rs/F60dE34.png'
             });
         } catch (e) {
             console.error(e)

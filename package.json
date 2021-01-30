@@ -1,6 +1,6 @@
 {
   "name": "fast-webhook",
-  "version": "1.0",
+  "version": "1.0.2",
   "description": "Easily create Discord Webhooks & create fallbacks using Discord.js",
   "main": "index.js",
   "scripts": {

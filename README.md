@@ -1,16 +1,15 @@
 
 
-Quick.hook 
+Fast webhook 
 ========
 
 <div align="center">
     <p>
-        <a href="https://discord.gg/plexidev"><img src="https://discordapp.com/api/guilds/343572980351107077/embed.png" alt="Discord Server" /></a>
-        <a href="http://www.youtube.com/subscription_center?add_user=TrueXPixels"><img src="https://img.shields.io/badge/Subscribe-YouTube-red.svg" alt="YouTube Channel" /></a>
+        <a href="https://discord.com/invite/7BeDqdRFtE"><img src="https://discordapp.com/api/guilds/794655657433104425/embed.png" alt="Discord Server" /></a>
     </p>
 </div> 
 
-### Support Discord: [https://discord.gg/plexidev](https://discord.gg/plexidev)
+### Support Discord: [https://discord.com/invite/7BeDqdRFtE](https://discord.com/invite/7BeDqdRFtE)
 
 ---
 
@@ -38,13 +37,4 @@ Image | Code
 ![](https://i.imgur.com/rW8ciG1.png) | ![](https://i.imgur.com/WYyIXBG.png)
 ![](https://i.imgur.com/U4lItWR.png) | ![](https://i.imgur.com/68T16fF.png)
 ![](https://i.imgur.com/4ss82AG.png) | ![](https://i.imgur.com/sybBMsQ.png)
-**Icons by [Nick Roach](https://www.iconfinder.com/iconsets/circle-icons-1)*
-
 ---
-
-## Need Icons?
-
-*Be sure to check the license before downloading/using an icon*
-
-- **[Circle Icons - Nick Roach](https://www.iconfinder.com/iconsets/circle-icons-1)**
-- **[Featured Icons - iconfinder.com](https://www.iconfinder.com/icon-sets/featured/free)**

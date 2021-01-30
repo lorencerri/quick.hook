@@ -3,7 +3,7 @@ module.exports = async function (channel, message, options) {
     async function sendHook(hook, message, options) {
 
         // Check for Embed
-        if (typeof message !== 'string' && ['RichEmbed', 'MessageEmbed'].includes(message.constructor.name)) {
+        if (typeof message !== 'string' && ['MessageEmbed'].includes(message.constructor.name)) {
             options.embeds = [message];
             message = null;
         }
@@ -20,14 +20,10 @@ module.exports = async function (channel, message, options) {
     }
 
     async function fallback(channel, message, timer) {
-
-        // Configure Channel
         channel = channel.channel || channel;
 
-        // Send Embed
         let callback = await channel.send(message)
 
-        // Run Options
         if (timer) callback.delete({
             timeout: timer
         })
@@ -65,14 +61,14 @@ module.exports = async function (channel, message, options) {
     if(sended) return;
 
     // Assign Webhook
-    let hook = webhooks.find(w => w.name === 'https://discord.gg/plexidev')
+    let hook = webhooks.find(w => w.name === 'Slash')
     if (!hook) {
         try {
-            hook = await channel.createWebhook('https://discord.gg/plexidev', {
-                avatar: 'https://pbs.twimg.com/profile_images/944717552290226176/zBF2n9zr_400x400.jpg'
+            hook = await channel.createWebhook('Slash', {
+                avatar: 'https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/microsoft/209/thinking-face_1f914.png'
             });
         } catch (e) {
-            hook = await channel.createWebhook('https://discord.gg/plexidev', 'https://pbs.twimg.com/profile_images/944717552290226176/zBF2n9zr_400x400.jpg');
+            console.error(e)
         }
         return sendHook(hook, message, options);
     }

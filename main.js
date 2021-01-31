@@ -3,7 +3,7 @@ module.exports = async(channel, message, options = {}) => {
     if(!channel.send || !channel.fetchWebhooks) return console.log(`[ FAST WEBHOOK ] Invalid channel.`)
     if(!message) return console.log(`[ FAST WEBHOOK ] Invalid message/embed.`)
     options = {
-        delete: options.delete || false,
+        mentions: options.mentions || true,
         name: options.name || (channel.client.user.username || "Slash"),
         icon: options.icon || (channel.client.user.displayAvatarURL({ dynamic: true }) || "")        
     }
@@ -13,7 +13,7 @@ module.exports = async(channel, message, options = {}) => {
         console.log(`[ FAST WEBHOOK ] Can't fetch webhooks in #${channel.name} (${channel.id}) at guild ${channel.guild.name} (${channel.guild.id})`)
     });
 
-    if(webhooks) return;
+    if(!webhooks) return;
 
     let hook = webhooks.find(w => w.name === channel.client.user.username)
 
@@ -36,11 +36,22 @@ module.exports = async(channel, message, options = {}) => {
         message = null;
     }
 
-    let callback = await hook.send(message, {
-        username: options.name,
-        avatarURL: options.icon,
-        embeds: options.embeds
-    });
+    let callback;
+
+    if(options.mentions) {
+        callback = await hook.send(message, {
+            username: options.name,
+            avatarURL: options.icon,
+            embeds: options.embeds,
+        });
+    } else {
+        callback = await hook.send(message, {
+            username: options.name,
+            avatarURL: options.icon,
+            embeds: options.embeds,
+            allowedMentions: { parse: [] }
+        });
+    }
 
     return callback;
 }

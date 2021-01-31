@@ -31,7 +31,7 @@ message | `string` **or** `embed` | false | *none* | The message or embed to sen
 options | `object` | true | *none* | The options for the webhook
 options.name | `string` | true | Server Invite | The title of the webhook
 options.icon | `iconURL` | true | *Webhook Icon* | The icon of the webhook
-
+options.mentions | `boolean` | true | *True* | If `false` webhook will don't ping anyone.
 ---
 
 ## Examples
@@ -42,6 +42,7 @@ options.icon | `iconURL` | true | *Webhook Icon* | The icon of the webhook
   ![](https://i.imgur.com/rW8ciG1.png) 
 ```js
 const send = require('fast-webhook');
+
 
 send(message.channel, 'Current Settings...', {
     name: 'Settings',

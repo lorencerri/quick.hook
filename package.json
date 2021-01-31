@@ -1,8 +1,8 @@
 {
   "name": "fast-webhook",
-  "version": "1.0.3",
+  "version": "1.1",
   "description": "Easily create Discord Webhooks & create fallbacks using Discord.js",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

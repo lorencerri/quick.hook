@@ -19,6 +19,10 @@ This package creates an easy way to send webhooks, *as well as providing fallbac
 
 ---
 
+```js
+const send = require('fast-webhook');
+```
+
 ## Documentation
 Parameter | Type | Optional | Default | Description
 --- | --- | --- | --- | ---
@@ -32,9 +36,47 @@ options.icon | `iconURL` | true | *Webhook Icon* | The icon of the webhook
 
 ## Examples
 
-Image | Code
---- | ---
-![](https://i.imgur.com/rW8ciG1.png) | ![](https://i.imgur.com/WYyIXBG.png)
-![](https://i.imgur.com/U4lItWR.png) | ![](https://i.imgur.com/68T16fF.png)
-![](https://i.imgur.com/4ss82AG.png) | ![](https://i.imgur.com/sybBMsQ.png)
+![](https://i.imgur.com/rW8ciG1.png) 
+```js
+const send = require('fast-webhook');
+
+send(message.channel, 'Current Settings...', {
+    name: 'Settings',
+    icon: 'https://i.imgur.com/X9eAmHm.png'
+})
+```
+![](https://i.imgur.com/U4lItWR.png) 
+```js
+const send = require('fast-webhook');
+const { MessageEmbed } = require('discord.js');
+
+const embed = new MessageEmbed()
+    .setColor("#77C2AE")
+    .setTitle(`California`)
+    .setDescription(`**By *Clayton James***`)
+    .setFooter(`Just a normal embed!`);
+
+send(message.channel, embed, {
+    name: 'Now Playing',
+    icon: 'https://i.imgur.com/44YTwve.png'
+})
+```
+![](https://i.imgur.com/4ss82AG.png) 
+```js
+const send = require('fast-webhook');
+const { MessageEmbed } = require('discord.js');
+
+const embed = new MessageEmbed()
+    .setColor("#f5cf88")
+    .setTitle(`TrueXPixels`)
+    .setDescription(`*This is tge starred message*`)
+    .setFooter(`Starred by: Plexi Development`);
+
+send(message.channel, embed, {
+    name: 'Starboard - New Message',
+    icon: 'https://i.imgur.com/VYJScHf.png'
+})
+```
 ---
+
+© [TrueXPixels](https://discord.gg/plexidev) 2018 || Edited by [DomeQ#0001](https://discord.gg/7BeDqdRFtE)

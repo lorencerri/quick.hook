@@ -3,7 +3,7 @@ module.exports = async(channel, message, options = {}) => {
     if(!channel.send || !channel.fetchWebhooks) return console.log(`[ FAST WEBHOOK ] Invalid channel.`)
     if(!message) return console.log(`[ FAST WEBHOOK ] Invalid message/embed.`)
     options = {
-        mentions: options.mentions || true,
+        mentions: options.mentions,
         name: options.name || (channel.client.user.username || "Slash"),
         icon: options.icon || (channel.client.user.displayAvatarURL({ dynamic: true }) || "")        
     }

@@ -9,11 +9,20 @@ module.exports = async function (channel, message, options) {
         }
 
         // Send Webhook
-        let callback = await hook.send(message, {
-            username: options.name,
-            avatarURL: options.icon,
-            embeds: options.embeds
-        });
+        if ((options.mentions || true) !== false) { // Disable mentions if options.mentions is false
+          let callback = await hook.send(message, {
+              username: options.name,
+              avatarURL: options.icon,
+              embeds: options.embeds
+          });
+        } else {
+          let callback = await hook.send(message, {
+              username: options.name,
+              avatarURL: options.icon,
+              embeds: options.embeds,
+              allowedMentions: { parse: [] }
+          });
+        }
       
         resolve(callback);
 
